@@ -1,21 +1,29 @@
 # include "math_utils.h"
-#include <math.h>
-bool IsSquare(int num){
-  return math.sqrt(num)/num == 1;
+using namespace std;
+bool Math_utils::IsSquare(int num){
+    for (int i = 0; i < num / 2 + 2; i++)
+    {
+        if (i * i == num)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 // — returns the digit at place in the number. Place should be base ten:
-int GetDigit(int num, int place){
-  return 0;
+int Math_utils::GetDigit(int num, int place){
+  if(num > place){
+      return (num/place)%10;
+  }
+  throw std::invalid_argument("");
 }
 
-GetDigit(17, 1);
-
 //— returns true iff x and y have equal parity (both odd or both even)
-bool EqualParity(int x, int y){
+bool Math_utils::EqualParity(int x, int y){
   return false;
 }
 // — returns true iff all numbers in nums have equal parity (both odd or both even)
-bool EqualParity(std::vector<int> nums){
+bool Math_utils::EqualParity(std::vector<int> nums){
   return false;
 }
