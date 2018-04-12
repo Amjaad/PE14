@@ -14,4 +14,6 @@ public:
   // — returns true iff all numbers in nums have equal parity (both odd or both even)
   static bool EqualParity(std::vector<int> nums);
 
+    static double solveQuadratic(int a, int b, int c);
+
 };
