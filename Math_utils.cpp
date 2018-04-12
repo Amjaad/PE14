@@ -1,4 +1,6 @@
+#include <cmath>
 # include "math_utils.h"
+
 using namespace std;
 bool Math_utils::IsSquare(int num){
     for (int i = 0; i < num / 2 + 2; i++)
@@ -44,4 +46,15 @@ bool Math_utils::EqualParity(std::vector<int> nums){
   }
 
   return true;
+}
+
+
+/*
+Calulates x for a given a, b, and c, then returns it
+*/
+double Math_utils::solveQuadratic(int a, int b, int c) {
+    double x1 = (-1 * b + sqrt(b * b - 4 * a * c) / 2 * a * c);
+    // to do plus or minus
+    double x2 = (-1 * b - sqrt(b * b - 4 * a * c) / 2 * a * c);
+    return x1;
 }
